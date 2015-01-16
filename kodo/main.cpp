@@ -1,4 +1,4 @@
-#include "EO.h"
+#include "EO/EO_CPP.h"
 
 #include <iostream>
 #include <string>
@@ -11,7 +11,7 @@ vaka SubtrahiNombrojn();
 
 entjera cxefejo()
 {
-	konzolaEligo << "Saluton!" << finaLineo;
+	std::konzolaEligo << "Saluton!" << finaLineo;
 	bulea cxuFinita = malvera;
 	
 	dum ( !cxuFinita )
