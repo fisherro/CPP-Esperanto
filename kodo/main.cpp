@@ -1,39 +1,53 @@
 #include "EO.h"
 
 #include <iostream>
-using namespace std;
+#include <string>
+uzi nomspaco std; // using namespace
 
-int main()
+vaka AldoniNombrojn( entjera unu, entjera du ); // void function
+
+entjera cxefejo()
 {
-	cout << "Hello" << endl;
+	konzolaEligo << "Hello" << finaLineo;
 	
-	int number;
-	cout << "Enter a number: ";
-	cin >> number;
+	entjera nombro;
+	konzolaEligo << "Entajpi nombron: ";
+	konzolaEnigo >> nombro;
 	
-	if( number == 0 ) 
+	se( nombro == 0 ) // if
 	{
+		konzolaEligo << "Zero" << finaLineo;
 	}
-	else if ( number == 1 )
+	alie se ( nombro == 1 ) // else if
 	{
+		konzolaEligo << "One" << finaLineo;
 	}
-	else 
+	alie // else
 	{
-	}
-	
-	for ( int i = 0; i < number; i++ )
-	{
-		cout << "Number " << i << endl;
+		konzolaEligo << "Something Else" << finaLineo;
 	}
 	
-	number = number * 3;
-	while ( number > 0 )
+	pro ( entjera i = 0; i < nombro; i++ ) // for
 	{
-		cout << number << "\t";
-		number--;
+		konzolaEligo << "nombro " << i << finaLineo;
+	}
+	
+	nombro = nombro * 3;
+	dum ( nombro > 0 ) // while
+	{
+		konzolaEligo << nombro << "\t";
+		nombro--;
 	};
 	
-	cout << "end" << endl;
+	AldoniNombrojn( nombro, nombro*2 );
 	
-    return 0;
+	konzolaEligo << "end" << endl;
+	
+    redoni 0; // return
+}
+
+vaka AldoniNombrojn( entjera unu, entjera du ) 
+{
+	entjera sumo = unu + du;
+	konzolaEligo << unu << " + " << du << " = " << sumo << finaLineo;
 }
