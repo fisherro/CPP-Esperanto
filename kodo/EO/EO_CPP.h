@@ -1,5 +1,5 @@
-#ifndef _EOLANG
-#define _EOLANG
+#ifndef _EO_CPP
+#define _EO_CPP
 
 #define redoni 		return
 #define cxefejo 	main
