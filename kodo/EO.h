@@ -12,11 +12,20 @@
 #define dum while
 #define gxis until
 #define pro for
+#define sxaltilo switch
+#define okazo case
+#define halti break
+#define defauxlto default
 
 /* Data Types */
 #define entjera int
 #define signa char
 #define vaka void
+#define bulea bool
+
+/* Other Values */
+#define vera true
+#define malvera false
 
 /* stdlib */
 #define konzolaEligo cout

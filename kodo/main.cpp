@@ -4,50 +4,77 @@
 #include <string>
 uzi nomspaco std; // using namespace
 
-vaka AldoniNombrojn( entjera unu, entjera du ); // void function
+entjera PreniMenuanElekton();
+vaka MontriMenuon();
+vaka AdiciiNombrojn();
+vaka SubtrahiNombrojn();
 
 entjera cxefejo()
 {
-	konzolaEligo << "Hello" << finaLineo;
+	konzolaEligo << "Saluton!" << finaLineo;
+	bulea cxuFinita = malvera;
 	
-	entjera nombro;
-	konzolaEligo << "Entajpi nombron: ";
-	konzolaEnigo >> nombro;
-	
-	se( nombro == 0 ) // if
+	dum ( !cxuFinita )
 	{
-		konzolaEligo << "Zero" << finaLineo;
+		entjera elekto = PreniMenuanElekton();
+		
+		sxaltilo( elekto )
+		{
+			okazo 1:
+				AdiciiNombrojn();
+			halti;
+			
+			okazo 2:
+				SubtrahiNombrojn();
+			halti;
+			
+			okazo 3:
+				konzolaEligo << "Gxis!" << finaLineo;
+				cxuFinita = vera;
+			halti;			
+		}
 	}
-	alie se ( nombro == 1 ) // else if
-	{
-		konzolaEligo << "One" << finaLineo;
-	}
-	alie // else
-	{
-		konzolaEligo << "Something Else" << finaLineo;
-	}
-	
-	pro ( entjera i = 0; i < nombro; i++ ) // for
-	{
-		konzolaEligo << "nombro " << i << finaLineo;
-	}
-	
-	nombro = nombro * 3;
-	dum ( nombro > 0 ) // while
-	{
-		konzolaEligo << nombro << "\t";
-		nombro--;
-	};
-	
-	AldoniNombrojn( nombro, nombro*2 );
-	
-	konzolaEligo << "end" << endl;
-	
-    redoni 0; // return
 }
 
-vaka AldoniNombrojn( entjera unu, entjera du ) 
+entjera PreniMenuanElekton()
 {
-	entjera sumo = unu + du;
-	konzolaEligo << unu << " + " << du << " = " << sumo << finaLineo;
+	MontriMenuon();
+	entjera elekto = -1;
+	dum ( elekto != 1 && elekto != 2 && elekto != 3 )
+	{
+		konzolaEligo << "Via Elekto: ";
+		konzolaEnigo >> elekto;
+	}
+	redoni elekto;
+}
+
+vaka MontriMenuon()
+{
+	konzolaEligo << finaLineo;
+	konzolaEligo << "---------------------" << finaLineo;
+	konzolaEligo << "1. Adicii nombrojn" << finaLineo;
+	konzolaEligo << "2. Subtrahi nombrojn" << finaLineo;
+	konzolaEligo << "3. Forlasi" << finaLineo;
+}
+
+vaka AdiciiNombrojn()
+{
+	entjera unu, du;
+	konzolaEligo << "Unua Nombro: ";
+	konzolaEnigo >> unu;
+	konzolaEligo << "Dua Nombro: ";
+	konzolaEnigo >> du;
+	entjera rezulto = unu + du;
+	konzolaEligo << unu << " + " << du << " = " << rezulto << finaLineo;	
+}
+
+vaka SubtrahiNombrojn()
+{
+	entjera unu, du;
+	konzolaEligo << "Unua Nombro: ";
+	konzolaEnigo >> unu;
+	konzolaEligo << "Dua Nombro: ";
+	konzolaEnigo >> du;
+	entjera rezulto = unu - du;
+	konzolaEligo << unu << " - " << du << " = " << rezulto << finaLineo;
 }
